@@ -1,0 +1,98 @@
+---
+title: Azure SDK for Java
+description: Overview of the features and capabilities of the Azure SDK for Java that helps developers be more productive when working with Azure services.
+author: kraigb
+ms.author: kraigb
+manager: barbkess
+ms.service: multiple
+ms.date: 10/30/2019
+ms.topic: conceptual
+ms.devlang: java
+---
+
+# Azure SDK for Java
+
+The Azure SDK for Java simplifies using and managing Azure resources from Java application code.
+
+You install the SDK by installing any of its individual component libraries by adding a maven dependency. You can see the list of libraries on the [Azure SDK for Java package index](https://github.com/Azure/azure-sdk-for-java/blob/master/packages.md).
+
+
+> [!TIP]
+> For information on changes in the SDK, see the [SDK release notes](https://azure.github.io/azure-sdk/).
+
+## Connect and use Azure services
+
+A number of *client libraries* in the SDK help you connect to existing Azure resources and use them in your apps, such as uploading files, accessing table data, or working with the various Azure Cognitive Services. With the SDK you work with those resources using familiar Java programming paradigms rather than using the service's generic REST API.
+
+For example, suppose you want to upload a blob to an Azure Storage account that you've previously provisioned. The first step is to grab the appropriate library:
+
+```bash
+[MISSING INFO]
+```
+
+Next, import the library in your code:
+
+```java
+[MISSING INFO]
+```
+
+Finally, use the library's API to connect to and upload the data. In this example, the connection string and container name are already provisioned in your storage account. The blob name is the name you assign to the uploaded data:
+
+```java
+[MISSING INFO]
+```
+
+For details on working with each specific library, see the *README.md* or *README.rst* file located in the library's project folder in our [GitHub repository](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk). Also refer to the available [Azure Samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure&languages=java).
+
+You can also find additional code snippets in the [reference documentation](/java/api/overview/azure/?view=azure-java-stable)
+
+### The Azure Core library
+
+We are currently updating our Java client libraries to share core functionality such as retries, logging, transport protocols, authentication protocols, etc. This shared functionality is contained in the [azure-core](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/core/) libraries. For details on the library and its guidelines, see the [Java Guidelines: Introduction](https://azure.github.io/azure-sdk/java_introduction.html).
+
+The libraries that currently work with the Core library are as follows:
+
+- `azure-storage-blob`
+- `azure-storage-queue`
+- `azure-keyvault-keys`
+- `azure-keyvault-secrets`
+
+## Manage Azure resources
+
+The Azure SDK for Java also includes many libraries to help you create, provision, and otherwise manage Azure resources themselves. We refer to these as *management libraries*. Each management library contains `-mgmt-` in its name. With the management libraries, you can write Java code to accomplish the same tasks that you can using the [Azure portal](https://portal.azure.com) or the [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli).
+
+For example, suppose you want to create a SQL Server instance. First, get the appropriate management library:
+
+```bash
+[MISSING INFO]
+```
+
+In your Java code, import the library:
+
+```java
+[MISSING INFO]
+
+```
+
+Next, create the management client object using your credentials and Azure subscription ID:
+
+```java
+[MISSING INFO]
+```
+
+Finally, use that client object to create the resource, using an appropriate resource group name, server name, location, and administrator credentials:
+
+```java
+[MISSING INFO]
+```
+
+As with the client libraries, you can find details on working with each management library in the *README.md* or *README.rst* file located in the library's project folder in our [GitHub repository](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk).
+
+You can also find additional code snippets in the [reference documentation](/java/api/overview/azure/?view=azure-java-stable).
+
+## Get help and give feedback
+
+- Visit the [Azure SDK for Java documentation](https://aka.ms/java-docs)
+- Post questions to the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-sdk-java)
+- Open issues against the SDK on [GitHub](https://github.com/Azure/azure-sdk-for-java/issues)
+- Tweet at [@AzureSDK](https://twitter.com/AzureSdk/)
